@@ -1,0 +1,11 @@
+readFile = open('siri.txt', 'r') 
+row = readFile.readlines()  
+readFile.close() 
+selectRow = 0 
+tmp = row[selectRow].split() 
+strRev = " ".join(tmp[::-1]) 
+row.pop(selectRow) 
+row.insert(selectRow, strRev) 
+writeFile = open('siri.txt', 'w')   
+writeFile.writelines(row) 
+writeFile.close()
